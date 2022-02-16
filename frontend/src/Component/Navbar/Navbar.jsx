@@ -1,33 +1,37 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./navbar.css"
 function Navbar() {
+    const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
   return (
   <>
     <section className="desktop-view">
-        <nav className="navbar navbar-expand-lg bg-primary">
+        <nav className="navbar navbar-expand-lg shadow"  style={{ backgroundColor: '#fff' }}>
             <div className="container-fluid">
                 <a className="navbar-brand logo-style" href='/'>Proyojone</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
+                <div className='menu-icon navbar-toggler text-dark' onClick={handleClick} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i className= {click ? 'fas fa-times' : 'fas fa-bars'}></i>
+              </div>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Home</a>
+                        <a className="nav-link navbar-item" href="/">Home</a>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/earn">Earn With Proyojone</a>
+                        <a className="nav-link navbar-item" href="/earn">Earn With Proyojone</a>
                     </li>
 
                     <li className="nav-item dropdown dropdown_auto">
                         <div className="nav-link dropdown-toggle" id="navbarDropdown" role="button"  aria-expanded="false">
                             Services
                         </div>
-                        <ul className="dropdown-menu border-0 bg-primary dropdown_auto_menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="/">Food</a></li>
-                            <li><a className="dropdown-item" href="/">Grocery</a></li>
-                            <li><a className="dropdown-item" href="/">Phermacy</a></li>
+                        <ul className="dropdown-menu dropdown_auto_menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="/car"><img src= "assets/images/menubar-icon/car.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Car</a></li>
+                            <li><a className="dropdown-item" href="/bike-rider"><img src= "assets/images/menubar-icon/motorbike.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Bike Rider</a></li>
+                            <li><a className="dropdown-item" href="/food"><img src= "assets/images/menubar-icon/fast-food.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Food</a></li>
+                            <li><a className="dropdown-item" href="/grocery"><img src= "assets/images/menubar-icon/shopping-bag.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Grocery</a></li>
+                            <li><a className="dropdown-item" href="/phermacy"><img src= "assets/images/menubar-icon/pharmacy.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Phermacy</a></li>
                         </ul>
                     </li>
 
@@ -35,7 +39,7 @@ function Navbar() {
                         <div className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" aria-expanded="false">
                             Help
                         </div>
-                        <ul className="dropdown-menu border-0 bg-primary dropdown_auto_menu" aria-labelledby="navbarDropdown">
+                        <ul className="dropdown-menu dropdown_auto_menu" aria-labelledby="navbarDropdown">
                             <li><a className="dropdown-item" href="/">User Help Center</a></li>
                             <li><a className="dropdown-item" href="/">Merchant Help Center</a></li>
                             <li><a className="dropdown-item" href="/">How to join Proyojone</a></li><hr/>
@@ -45,14 +49,14 @@ function Navbar() {
                         </ul>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Blog</a>
+                        <a className="nav-link navbar-item" href="/">Blog</a>
                     </li>
 
                     <li className="nav-item dropdown dropdown_auto">
                         <div className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" aria-expanded="false">
                             More
                         </div>
-                        <ul className="dropdown-menu border-0 bg-primary dropdown_auto_menu" aria-labelledby="navbarDropdown">
+                        <ul className="dropdown-menu dropdown_auto_menu" aria-labelledby="navbarDropdown">
                             <li><a className="dropdown-item" href="/">Download App</a></li>
                             <li><a className="dropdown-item" href="/">Proyojone for Business</a></li>
                             <li><a className="dropdown-item" href="/">Proyojone Points</a></li>
@@ -81,13 +85,14 @@ function Navbar() {
             </div>
         </nav>
     </section>
+
     <section className="mobile-view">
-        <nav className="navbar navbar-expand-lg bg-primary">
+        <nav className="navbar navbar-expand-lg shadow"  style={{ backgroundColor: '#fff' }}>
             <div className="container-fluid">
                 <a className="navbar-brand logo-style" href='/'>Proyojone</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
+                <div className='menu-icon navbar-toggler text-dark' onClick={handleClick} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i className= {click ? 'fas fa-times' : 'fas fa-bars'}></i>
+                </div>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                     <li className="nav-item">
@@ -102,10 +107,12 @@ function Navbar() {
                         <a className="nav-link dropdown-toggle" href='/' id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
                             Services
                         </a>
-                        <ul className="dropdown-menu border-0 bg-primary dropdown_auto_menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="/">Food</a></li>
-                            <li><a className="dropdown-item" href="/">Grocery</a></li>
-                            <li><a className="dropdown-item" href="/">Phermacy</a></li>
+                        <ul className="dropdown-menu border-0 dropdown_auto_menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="/car"><img src= "assets/images/menubar-icon/car.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Car</a></li>
+                            <li><a className="dropdown-item" href="/bike-rider"><img src= "assets/images/menubar-icon/motorbike.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Bike Rider</a></li>
+                            <li><a className="dropdown-item" href="/food"><img src= "assets/images/menubar-icon/fast-food.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Food</a></li>
+                            <li><a className="dropdown-item" href="/grocery"><img src= "assets/images/menubar-icon/shopping-bag.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Grocery</a></li>
+                            <li><a className="dropdown-item" href="/phermacy"><img src= "assets/images/menubar-icon/pharmacy.png" className='menubar-icon img-fluid' alt=''/>&nbsp;&nbsp;&nbsp;Phermacy</a></li>
                         </ul>
                     </li>
 
@@ -113,7 +120,7 @@ function Navbar() {
                         <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Help
                         </a>
-                        <ul className="dropdown-menu border-0 bg-primary dropdown_auto_menu" aria-labelledby="navbarDropdown">
+                        <ul className="dropdown-menu border-0 dropdown_auto_menu" aria-labelledby="navbarDropdown">
                             <li><a className="dropdown-item" href="/">User Help Center</a></li>
                             <li><a className="dropdown-item" href="/">Merchant Help Center</a></li>
                             <li><a className="dropdown-item" href="/">How to join Proyojone</a></li><hr/>
@@ -130,7 +137,7 @@ function Navbar() {
                         <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                         </a>
-                        <ul className="dropdown-menu border-0 bg-primary dropdown_auto_menu" aria-labelledby="navbarDropdown">
+                        <ul className="dropdown-menu border-0 dropdown_auto_menu" aria-labelledby="navbarDropdown">
                             <li><a className="dropdown-item" href="/">Download App</a></li>
                             <li><a className="dropdown-item" href="/">Proyojone for Business</a></li>
                             <li><a className="dropdown-item" href="/">Proyojone Points</a></li>
@@ -148,7 +155,7 @@ function Navbar() {
                         <div className="nav-link dropdown-toggle" href="/" id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Language
                         </div>
-                        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a className="dropdown-item" href="/">বাংলা</a></li>
                             <li><a className="dropdown-item" href="/">English</a></li>
 

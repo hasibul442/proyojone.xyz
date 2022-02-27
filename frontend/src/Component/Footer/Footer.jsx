@@ -35,7 +35,7 @@ function Footer() {
                 </div>
             </div>
             <div className='footer2'>
-                <p className='text-center mt-2'>Copyright © 2022 Proyojone.xyz | All Rights Reserved</p>
+                <p className='text-center mt-2'>Copyright © {new Date().getFullYear()} Proyojone.xyz | All Rights Reserved</p>
             </div>
         </footer>
     </>

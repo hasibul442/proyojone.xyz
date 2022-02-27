@@ -1,5 +1,6 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel2';
+import CountUp from 'react-countup';
 import "./homepage.css"
 import 'react-owl-carousel2/lib/styles.css';
 import 'react-owl-carousel2/src/owl.theme.green.css';
@@ -47,22 +48,22 @@ function Homepage() {
           <div className="container">
             <div className="row pt-3 pb-3">
               <div className="col-md-3 text-center">
-                <h1>1000</h1>
+                <h1><CountUp end={1000} /></h1>
                 <h6>Shop</h6>
               </div>
 
               <div className="col-md-3 text-center">
-                <h1>43</h1>
+                <h1><CountUp end={43} /></h1>
                 <h6>Services</h6>
               </div>
               
               <div className="col-md-3 text-center">
-                <h1>100</h1>
+                <h1><CountUp end={100} /></h1>
                 <h6>Area</h6>
               </div>
 
               <div className="col-md-3 text-center">
-                <h1>100000</h1>
+                <h1><CountUp end={100000} /></h1>
                 <h6>Apps Download</h6>
               </div>
             </div>

@@ -1,0 +1,41 @@
+.homepage-image{
+    width: 100%;
+    height: 450px;
+}
+.image-text{
+    position: absolute;
+    top:30%;
+    right: 8%;
+}
+.btn1{
+    background-color: #ff5403;
+    padding:10px 15px;
+    color: #fff;
+    font-size: 18px;
+}
+.btn2{
+    background-color: #fff323;
+    padding:10px 15px;
+    color: #000;
+    font-size: 18px;
+}
+.shop-count-block{
+    background-color: #fff323;
+    
+}
+.shop-count-block h1{
+    color: #8A39E1;
+}
+.shop-count-block h6{
+    color: #FC28FB;
+}
+.what_we_provide .service-img{
+    height: 100px;
+    width: 100px;
+}
+.what_we_provide .card{
+    border: 1px solid #8A39E1;
+    height: 230px;
+    z-index: 0;
+    /* background-color: #f9071711; */
+}

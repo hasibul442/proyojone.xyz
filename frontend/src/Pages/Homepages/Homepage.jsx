@@ -9,8 +9,9 @@ function Homepage() {
     loop:true,
     margin: 10,
     autoplay: true,
-    autoplaySpeed:2000,
-    responsiveRefreshRate:10,
+    // fluidSpeed : 2000,
+    // autoplaySpeed:5000,
+    // autoplayTimeout: 5000,
     nav:true,
     responsive: {
       0: {
@@ -133,7 +134,7 @@ function Homepage() {
         </div>
       </section>
 
-      <section className='container mt-5'>
+      <section className='container pt-5'>
         <h4>Why Choose US</h4>
         <h1>Because we care about you.... </h1>
         <div className="row">

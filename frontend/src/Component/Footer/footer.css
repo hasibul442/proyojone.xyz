@@ -1,9 +1,13 @@
 .footer1{
     background-color: #1d003b;
-    height: 100%;
     color: #fff;
+    height: 100%;
 }
 .other-page{
     text-decoration: none;
+    color: #fff;
+}
+.footer2{
+    background-color: #cacaca;
     color: #fff;
 }

@@ -4,17 +4,17 @@ import "./footer.css"
 function Footer() {
   return (
     <>
-        <footer>
+        <section>
             <div className='footer1'>
                 <div className='container'>
                     <div className="row">
                         <div className="col-md-3">
                             <h4 className='mt-3 ' style={{color:"#fff323"}}>Contact</h4>
-                            <h6><i class="fas fa-mobile-alt"></i>  00000</h6>
-                            <h6><i class="fas fa-envelope"></i>  info@proyojone.xyz</h6>
+                            <h6><i className="fas fa-mobile-alt"></i>  00000</h6>
+                            <h6><i className="fas fa-envelope"></i>  info@proyojone.xyz</h6>
                             <h5 style={{color:"#fff323"}}>Corporate Address:</h5>
-                            <h7>House # 57, Road # 25, Block - A,<br />
-                                Banani, Dhaka 1212</h7>
+                            <h6>House # 57, Road # 25, Block - A,<br />
+                                Banani, Dhaka 1212</h6>
 
                         </div>
                         <div className="col-md-3">
@@ -35,9 +35,9 @@ function Footer() {
                 </div>
             </div>
             <div className='footer2'>
-                <p className='text-center mt-2'>Copyright © {new Date().getFullYear()} Proyojone.xyz | All Rights Reserved</p>
+                <p className='text-center pt-2 pb-2'>Copyright © {new Date().getFullYear()} Proyojone.xyz | All Rights Reserved</p>
             </div>
-        </footer>
+        </section>
     </>
   )
 }

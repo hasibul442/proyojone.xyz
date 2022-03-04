@@ -1,7 +1,7 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel2';
 import CountUp from 'react-countup';
-import TextTransition, { presets } from "react-text-transition";
+import TextTransition from "react-text-transition";
 import "./homepage.css"
 import 'react-owl-carousel2/lib/styles.css';
 import 'react-owl-carousel2/src/owl.theme.green.css';

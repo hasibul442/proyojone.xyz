@@ -1,17 +1,19 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel2';
 import CountUp from 'react-countup';
+import TextTransition, { presets } from "react-text-transition";
 import "./homepage.css"
 import 'react-owl-carousel2/lib/styles.css';
 import 'react-owl-carousel2/src/owl.theme.green.css';
+import { Link } from 'react-router-dom';
+
+const texts = ["Shop","Service","Option","Choose","Order"];
+
 function Homepage() {
   const options = {
     loop:true,
     margin: 10,
     autoplay: true,
-    // fluidSpeed : 2000,
-    // autoplaySpeed:5000,
-    // autoplayTimeout: 5000,
     nav:true,
     responsive: {
       0: {
@@ -27,44 +29,60 @@ function Homepage() {
     }
     
 };
- 
+const [index, setIndex] = React.useState(0);
+React.useEffect(() => {
+  const intervalId = setInterval(() => setIndex(index => index + 1), 3000);
+  return () => clearTimeout(intervalId);
+}, []);
+
   return (
+    
     <>
       <section>
         <div>
-          <img src="/assets/images/homepage/2.jpg" className='homepage-image' alt="" />
+          <img src="/assets/images/homepage/2.png" className='homepage-image' alt="" />
         </div>
-        <div className='container'>
+        <div >
             <div className='image-text'>
-              <p className='h3' >One App <br/> More Service</p>
-              <button className='btn btn1'><i className="fas fa-money-bill-wave"></i> Make Money</button> <br /><br />
-              <button className='btn btn2'><i className="fas fa-download"></i> Download App</button>
+              <h2>One Of The Best Platfrom</h2>
+              <div className='inline h2'>
+                More&nbsp;
+              <TextTransition
+                  text={ texts[index % texts.length] }
+                  springConfig={{ stiffness: 50, damping: 20 }}
+                  inline
+                />s
+              </div>
+              <Link to='/' className='btn btn1 banner_button'><i className="fas fa-money-bill-wave"></i> Make Money</Link> <br /><br />
+              <Link to='/' className='btn btn2 banner_button'><i className="fas fa-download"></i> Download App</Link>
             </div>
             
         </div>
       </section>
+
+{/* Total number of shop area rider user  */}
 
       <section>
         <div className="shop-count-block">
           <div className="container">
             <div className="row pt-3 pb-3">
               <div className="col-md-3 text-center">
-                <h1><CountUp end={1000} /></h1>
+                <h1><CountUp end={1000} />+</h1>
                 <h6>Shop</h6>
               </div>
 
               <div className="col-md-3 text-center">
-                <h1><CountUp end={43} /></h1>
+                <h1><CountUp end={43} />+</h1>
                 <h6>Services</h6>
               </div>
               
               <div className="col-md-3 text-center">
-                <h1><CountUp end={100} /></h1>
+                <h1><CountUp end={100} />+</h1>
                 <h6>Area</h6>
               </div>
 
               <div className="col-md-3 text-center">
-                <h1><CountUp end={100000} /></h1>
+                <h1><CountUp end={1000} />+</h1>
                 <h6>Apps Download</h6>
               </div>
             </div>
@@ -73,11 +91,13 @@ function Homepage() {
       </section>
 
 
-      
+      {/* Services Carousel */}
       <section >
         <div className="container mt-5 what_we_provide">
-          <h6 className='what-we-provide'>What We Provide</h6>
-          <h3>We Provide all service that you need </h3>
+          <div className='text-center'>
+            <h6 className='what-we-provide'>What We Provide</h6>
+            <h3>We Provide all service that you need </h3>
+          </div>
           <div className="mt-5">
             
 
@@ -134,18 +154,20 @@ function Homepage() {
         </div>
       </section>
 
-      <section className='container pt-5'>
-        <h4>Why Choose US</h4>
-        <h1>Because we care about you.... </h1>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="row">
-              <div className="col-md-6">
-
-              </div>
-            </div>
+      <section className='earn_with_skill pt-5 pb-3'>
+        <div className="text-center">
+          <h3>Earn With Your Skill </h3>
+          <h5>If you have any skill you can earn easily</h5>
+        </div>
+        <div>
+          <div className='text-center mt-3'>
+            <Link to="/earn" className='btn start_earning pt-2 pb-2'>Start Earning <i className="fas fa-arrow-right"></i></Link>
           </div>
         </div>
+      </section>
+
+      <section className="container">
+
       </section>
     </>
   )

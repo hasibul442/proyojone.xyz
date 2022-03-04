@@ -9,11 +9,11 @@ import Services from './Pages/Services/Services';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename = {process.env.PUBLIC_URL}>
           <Navbar/>
           <Routes>  
                 <Route exact path='/' element={<Homepage />}/>
-                <Route path='/car' element={<Services />}/>   
+                <Route exact path='/car' element={<Services />}/>   
           </Routes>
           <Footer/>
       </Router>

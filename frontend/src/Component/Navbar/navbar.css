@@ -1,6 +1,6 @@
 .navbar{
-    z-index: 999;
-    position: fixed;
+    z-index: 99;
+    position:absolute;
     width: 100%;
 }
 .dropdown_auto:hover .dropdown_auto_menu{

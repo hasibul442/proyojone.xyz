@@ -13,8 +13,8 @@ function Footer() {
                             <h6><i className="fas fa-mobile-alt"></i>  00000</h6>
                             <h6><i className="fas fa-envelope"></i>  info@proyojone.xyz</h6>
                             <h5 style={{color:"#fff323"}}>Corporate Address:</h5>
-                            <h6>House # 57, Road # 25, Block - A,<br />
-                                Banani, Dhaka 1212</h6>
+                            <p>North Tower,<br />
+                                Uttara, Dhaka 1230</p>
 
                         </div>
                         <div className="col-md-3">
@@ -29,7 +29,23 @@ function Footer() {
                         <div className="col-md-6">
                             <h4 className='mt-3 text-center' style={{color:"#fff323"}}>Download Proyojone.xyz App</h4>
                             <p className='text-center'>Tackle your to-do list wherever you are with our mobile app & make your life easy.</p>
+                            <div className='text-center'>
+                                <a href="https://www.apple.com/app-store/" target="_blank" className='btn app_link m-1' rel="noopener noreferrer">
+                                    <div className="d-flex flex-row">
+                                        <div className='my-auto'><i className="fab fa-apple fa-2x"></i></div>
+                                        &emsp;<div><span style={{ fontSize:"12px", fontWeight:'700' }}>Download on the</span> <br /> <span style={{ fontSize:"20px", fontWeight:'700' }}>App Store</span></div>
+                                    </div> 
+                                </a>
+                                <a href="https://play.google.com/store/apps" target="_blank" className='btn app_link m-1' rel="noopener noreferrer">
+                                    <div className="d-flex flex-row">
+                                        <div className='my-auto'><i className="fab fa-google-play fa-2x"></i></div>
+                                        &emsp;<div><span style={{ fontSize:"12px", fontWeight:'700' }}>GET IT ON</span> <br /> <span style={{ fontSize:"20px", fontWeight:'700' }}>Google Play</span></div>
+                                    </div> 
+                                </a>
+                            </div>
+                            <div className='footer-icon'>
 
+                            </div>
                         </div>
                     </div>
                 </div>

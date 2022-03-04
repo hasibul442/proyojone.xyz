@@ -1,23 +1,34 @@
 .homepage-image{
+    margin-top: 40px;
     width: 100%;
-    height: 450px;
+    height: 500px;
+    /* filter: blur(5px); */
+    /* -webkit-filter: blur(5px) */
 }
 .image-text{
-    position: absolute;
-    top:30%;
-    right: 8%;
+    color: #000;
+    position:absolute;
+    padding-top:150px;
+    padding-left:150px;
+    top: 0;
 }
+
 .btn1{
     background-color: #ff5403;
-    padding:10px 15px;
-    color: #fff;
-    font-size: 18px;
 }
 .btn2{
-    background-color: #fff323;
+    background-color: #8A39E1;
+}
+.banner_button{
+    color: #fff;
     padding:10px 15px;
-    color: #000;
     font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.banner_button:hover{
+    color: #fff;
 }
 .shop-count-block{
     background-color: #fff323;
@@ -38,4 +49,78 @@
     height: 230px;
     z-index: 0;
     /* background-color: #f9071711; */
+}
+/* .earn_with_skill{
+    background: #ff540318;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+} */
+.start_earning {
+    width: 220px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #8A39E1;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+}
+.start_earning:hover{
+    color: #fff;
+}
+
+.start_earning:before {
+    content: '';
+    background: linear-gradient(45deg, #ff5403, #ff0000, #8A39E1, #FC28FB, #00ffd5, #002bff, #7a00ff, #FC28FB, #00ff22);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.start_earning:active {
+    color: #fff;
+}
+
+.start_earning:active:after {
+    background: transparent;
+}
+
+.start_earning:hover:before {
+    opacity: 1;
+}
+
+.start_earning:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media screen and (max-width: 991px){
+    .image-text{
+        padding-top:150px;
+        padding-left:50px;
+    }
 }
